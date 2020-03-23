@@ -11,6 +11,8 @@ const App = () => {
     setSavedList( [...savedList, movie] );
   };
 
+  const [film] = useState()
+
   return (
     <div>
       <SavedList list={savedList} />
@@ -18,7 +20,7 @@ const App = () => {
           <MovieList />
       </Route>
       <Route path="/movies/:id">
-          <Movie  />
+          <Movie />
       </Route>
     </div>
   );

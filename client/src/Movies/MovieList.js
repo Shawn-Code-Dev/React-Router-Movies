@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   useParams,
   Route,
-  NavLink,
+  Link,
   Switch,
   useRouteMatch
 } from "react-router-dom";
@@ -38,6 +38,7 @@ function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   const { path, url } = useRouteMatch();
   return (
+    <Link to={`./movies/${movie.id}`}>
     <div className="movie-card">
       <h2>{title}</h2>
       <div className="movie-director">
@@ -54,6 +55,8 @@ function MovieDetails({ movie }) {
         </div>
       ))}
     </div>
+    </Link>
+
   );
 }
 
